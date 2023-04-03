@@ -11,7 +11,7 @@ type MONITORINFO struct {
 
 type RECT struct {
 	Left	winapi.LONG
-	Top		winapi.LONG
+	Top	winapi.LONG
 	Right	winapi.LONG
 	Bottom	winapi.LONG
 }
