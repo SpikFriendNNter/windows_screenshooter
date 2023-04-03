@@ -87,8 +87,7 @@ func Take_Screenshot() (*image.RGBA, error) {
 			g := *(*uint8)(unsafe.Pointer(src +1))
 			b := *(*uint8)(unsafe.Pointer(src))
 
-			// Why i can use this, but not img.Set, cause when the image
-			// creation is done, the actually image has so much noise?
+			// Adding rgba data inside of image
 			img.Pix[i], img.Pix[i+1], img.Pix[i+2], img.Pix[i+3] = r, g, b, 255
 
 			i += 4
