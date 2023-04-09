@@ -26,7 +26,7 @@
 
 - Finally, remember to free the buffer allocated in memory, free the DCs and window handlers, and close the bitmap objects.
 
-## <strong>O que é DC?</strong>
+## <strong>What is DC?</strong>
 - According to the windows documentation (https://learn.microsoft.com/en-us/cpp/mfc/device-contexts?view=msvc-170), a DC or Device Context is a Windows data structure containing information about drawing attributes of a device such as a monitor or printer. In short, it is a data structure for representing a graphics device. For more details, refer to the documentation indicated in the link above.
 
 ## <strong>How to get screen specs?</strong>
