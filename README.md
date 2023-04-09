@@ -1,39 +1,41 @@
-# <strong>Como é feito o processo de screenshot utilizando a API do Windows?</strong>
+# <strong>WARNING: This code is only for educational purposes. Please, do not use as part of any malicious code. Spread malware is crime.</strong>
+
+# <strong>How is the screenshot process done using the Windows API?</strong>
 
 <img src="https://assets.labs.ine.com/web/badges/low/winapi.png" width=200>
 
-## <strong>Processo</strong>
+## <strong>Process</strong>
 
-### O processo de captura de imagens utilizando a api do windows se dá pela seguinte estrutura:
+### The image capture process using the windows api is given by the following structure:
 
-- Obter o DC(Device Context) da tela.
+- Get the DC(Device Context) of the screen.
     
-- Criar um objeto Bitmap compatível com o DC de origem.
+- Create a Bitmap object compatible with the source DC..
     
-- Duplicar esse DC, criando um novo DC compatível com o original.
+- Duplicate that DC, creating a new DC compatible with the original.
     
-- É preciso definir alguns valores padrões que um header bitmap carrega.
+- You need to define some default values ​​that a bitmap header loads.
     
-- Após a criação do objeto bitmap, é preciso alocar espaço suficiente para conter o tamanho do bitmap na memória do sistema operacional para que sirva de buffer, e então, podermos acessar os dados do bitmap, que posteriormente, conterá os dados de cores obtidos pelo DC de origem.
+- After creating the bitmap object, it is necessary to allocate enough space to contain the size of the bitmap in the memory of the operating system to serve as a buffer, and then we can access the bitmap data, which later will contain the color data obtained by the DC source.
 
-- Utilizamos funções da API do windows para que seja feita a transferência/copia dos dados de cores do DC de origem para o DC de destino. O objeto Bitmap dentro do DC de destino irá conter os dados de cores obtidos do DC de origem. Normalmente, a função que realiza tal tarefa é BitBlt da dll gdi32.
+- We use Windows API functions to transfer/copy color data from the source DC to the destination DC. The Bitmap object inside the destination DC will contain the color data obtained from the source DC. Usually the function that performs such a task is BitBlt from the gdi32 dll.
 
-- Após isso, usamos a função GetDIBits que irá transferir os dados do objeto Bitmap no DC de destino para o buffer que alocamos na memoria.
+- After that, we use the GetDIBits function that will transfer the data from the Bitmap object in the destination DC to the buffer we allocated in memory.
 
-- Com isso feito, podemos obter os dados de cores RGB a partir do buffer como um rolo de bits(como um array), que tem a seguinte ordem de dados: BGR => Blue, Green, Red.
+- With that done, we can get the RGB color data from the buffer as a roll of bits (like an array), which has the following data order: BGR => Blue, Green, Red.
 
-- Para finalizar, lembre-se de liberar o buffer alocado em memória, liberar os DCs e window Handlers, e fechar os objetos bitmap.
+- Finally, remember to free the buffer allocated in memory, free the DCs and window handlers, and close the bitmap objects.
 
 ## <strong>O que é DC?</strong>
-- Segundo a documentação do windows (https://learn.microsoft.com/en-us/cpp/mfc/device-contexts?view=msvc-170), um DC ou Device Context é uma estrutura de dados do Windows contendo informações sobre atributos de desenho de um dispositivo como um monitor ou impressora. Em resumo, é uma estrutura de dados para representação de um dispositivo gráfico. Para mais detalhes, consulte a documentação indicada no link acima.
+- According to the windows documentation (https://learn.microsoft.com/en-us/cpp/mfc/device-contexts?view=msvc-170), a DC or Device Context is a Windows data structure containing information about drawing attributes of a device such as a monitor or printer. In short, it is a data structure for representing a graphics device. For more details, refer to the documentation indicated in the link above.
 
-## <strong>Como obter as especificações de tela?</strong>
+## <strong>How to get screen specs?</strong>
 
-- <span style="color:yellow;">GetMonitorInfoW:</span> função que obtém as especificações do monitor especificado. Lembrando-que, para que esta função funcione, é necessário fornecer um parâmetro, que é um <i style="color:#9dcec7;">HANDLE</i> para o monitor da janela especificada. <strong style="color:red;">Atenção:</strong> Passar como parâmetro o HANDLE da janela especificada causará um erro. O correto é obter o <i style="color:#9dcec7;">HANDLE</i> do monitor utilizando a função MonitorFromWindow.
+- <span style="color:yellow;">GetMonitorInfoW:</span> function that gets the specifications of the specified monitor. Remembering that, for this function to work, it is necessary to provide a parameter, which is a <i style="color:#9dcec7;">HANDLE</i> for the specified window monitor. <strong style="color:red;">Atention:</strong> Passing the HANDLE of the specified window as a parameter will cause an error. The correct thing is to get the <i style="color:#9dcec7;">HANDLE</i> from the monitor using the function MonitorFromWindow.
 
-- <span style="color:yellow;">MonitorFromWindow</span>: função que recebe como parâmetro um <i style="color:#9dcec7;">HANDLE</i> para uma janela especificada e retorna um <i style="color:#9dcec7;">HANDLE</i> de monitor daquela janela.
+- <span style="color:yellow;">MonitorFromWindow</span>: function that takes a <i style="color:#9dcec7;">HANDLE</i> as a parameter for a specified window and returns a <i style="color:#9dcec7;">HANDLE</i> of that window's monitor.
 
-## <strong>Funções da API do Windows utilizadas neste projeto</strong>
+## <strong>Windows Api functions used in this project:</strong>
 - <span style="color:yellow;">GetDesktopWindow</span>;
 - <span style="color:yellow;">MonitorFromWindow</span>;
 - <span style="color:yellow;">GetMonitorInfoW</span>;
@@ -48,5 +50,5 @@
 - <span style="color:yellow;">GlobalFree</span>;
 - <span style="color:yellow;">GlobalLock</span>;
 
-## Projeto utilizado como base
+## Project used as base
 - https://github.com/kbinani/screenshot
