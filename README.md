@@ -31,7 +31,7 @@
 
 ## <strong>How to get screen specs?</strong>
 
-- <span style="color:yellow;">GetMonitorInfoW:</span> function that gets the specifications of the specified monitor. Remembering that, for this function to work, it is necessary to provide a parameter, which is a <i style="color:#9dcec7;">HANDLE</i> for the specified window monitor. <strong style="color:red;">Atention:</strong> Passing the HANDLE of the specified window as a parameter will cause an error. The correct thing is to get the <i style="color:#9dcec7;">HANDLE</i> from the monitor using the function MonitorFromWindow.
+- <span style="color:yellow;">GetMonitorInfoW:</span> function that gets the specifications of the specified monitor. Remembering that, for this function to work, it is necessary to provide a parameter, which is a <i style="color:#9dcec7;">HANDLE</i> for the specified window monitor. <strong style="color:red;">Atention:</strong> Passing the HANDLE of the specified window as a parameter will cause an error. The correct way is to get the <i style="color:#9dcec7;">HANDLE</i> from the monitor using the function MonitorFromWindow.
 
 - <span style="color:yellow;">MonitorFromWindow</span>: function that takes a <i style="color:#9dcec7;">HANDLE</i> as a parameter for a specified window and returns a <i style="color:#9dcec7;">HANDLE</i> of that window's monitor.
 
