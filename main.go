@@ -4,11 +4,8 @@ import (
 	"windows_screenshooter/print"
 
 	"log"
-	"fmt"
 	"image/png"
 	"os"
-	"time"
-	"strconv"
 )
 
 func main() {
