@@ -1,4 +1,4 @@
-# <strong>WARNING: This code is only for educational purposes. Please, do not use as part of any malicious code. Spread malware is crime.</strong>
+# <strong>WARNING: This code is only for educational purposes. Please, do not use as part of any malicious code. Spreading malware is crime.</strong>
 
 # <strong>How is the screenshot process done using the Windows API?</strong>
 
