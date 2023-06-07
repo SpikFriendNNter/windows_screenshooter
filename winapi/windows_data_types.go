@@ -2,10 +2,10 @@ package winapi
 
 type HWND		uintptr
 type LONG		int32
-type LONGLONG	uint64
+type LONGLONG		uint64
 type WORD		uint16
 type DWORD		uint32
-type DWORDLONG	LONGLONG
+type DWORDLONG		LONGLONG
 
 
 const (
