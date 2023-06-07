@@ -1,14 +1,14 @@
 package print
 
 import (
-	"github.com/SpikFriendNNter/windows_screenshooter/winapi"
+	"github.com/spikfriendnnter/windows_screenshooter/winapi"
 )
 
 type BITMAPINFOHEADER struct {
-  BiSize 			winapi.DWORD 
-  BiWidth 			winapi.LONG
-  BiHeight 			winapi.LONG  
-  BiPlanes 			winapi.WORD  
+  BiSize 		winapi.DWORD 
+  BiWidth 		winapi.LONG
+  BiHeight 		winapi.LONG  
+  BiPlanes 		winapi.WORD  
   BiBitCount 		winapi.WORD  
   BiCompression 	winapi.DWORD 
   BiSizeImage 		winapi.DWORD 
