@@ -1,4 +1,4 @@
-package screen
+package windows_screenshooter
 
 import "github.com/spikfriendnnter/windows_screenshooter/winapi"
 
