@@ -1,7 +1,7 @@
-package windows_screenshooter
+package print
 
 import (
-	"github.com/spikfriendnnter/windows_screenshooter/winapi"
+	"github.com/SpikFriendNNter/windows_screenshooter/winapi"
 )
 
 type BITMAPINFOHEADER struct {
