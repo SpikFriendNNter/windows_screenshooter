@@ -1,6 +1,6 @@
 package screen
 
-import "windows_screenshooter/winapi"
+import "github.com/SpikFriendNNter/windows_screenshooter/winapi"
 
 type MONITORINFO struct {
 	CbSize		winapi.DWORD
