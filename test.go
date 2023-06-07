@@ -1,7 +1,7 @@
 package main
 
 import (
-	"windows_screenshooter/print"
+	"github.com/SpikFriendNNter/windows_screenshooter/print"
 	"log"
 	"image/png"
 	"os"
