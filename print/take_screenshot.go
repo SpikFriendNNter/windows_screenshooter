@@ -1,4 +1,4 @@
-package print
+package windows_screenshooter
 
 import (
 	"image"
