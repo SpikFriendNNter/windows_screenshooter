@@ -1,11 +1,11 @@
-package windows_screenshooter
+package screen
 
 import (
 	"syscall"
 	"unsafe"
 	"log"
 
-	"github.com/spikfriendnnter/windows_screenshooter/winapi"
+	"github.com/SpikFriendNNter/windows_screenshooter/winapi"
 )
 
 func loadDll(dll_name string) *syscall.DLL {
