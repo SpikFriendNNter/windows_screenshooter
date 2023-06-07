@@ -7,8 +7,8 @@ import (
 	"errors"
 	"unsafe"
 
-	"windows_screenshooter/screen"
-	"windows_screenshooter/winapi"
+	"github.com/SpikFriendNNter/windows_screenshooter/screen"
+	"github.com/SpikFriendNNter/windows_screenshooter/winapi"
 )
 
 func Take_Screenshot() (*image.RGBA, error) {
