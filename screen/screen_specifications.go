@@ -1,4 +1,4 @@
-package screen
+package windows_screenshooter
 
 import (
 	"syscall"
