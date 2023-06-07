@@ -1,6 +1,6 @@
-package windows_screenshooter
+package screen
 
-import "github.com/spikfriendnnter/windows_screenshooter/winapi"
+import "github.com/SpikFriendNNter/windows_screenshooter/winapi"
 
 type MONITORINFO struct {
 	CbSize		winapi.DWORD
@@ -11,7 +11,7 @@ type MONITORINFO struct {
 
 type RECT struct {
 	Left	winapi.LONG
-	Top	winapi.LONG
+	Top		winapi.LONG
 	Right	winapi.LONG
 	Bottom	winapi.LONG
 }
