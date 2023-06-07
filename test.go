@@ -2,7 +2,6 @@ package main
 
 import (
 	"windows_screenshooter/print"
-
 	"log"
 	"image/png"
 	"os"
