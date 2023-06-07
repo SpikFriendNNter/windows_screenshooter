@@ -5,7 +5,7 @@ import (
 	"unsafe"
 	"log"
 
-	"windows_screenshooter/winapi"
+	"github.com/SpikFriendNNter/windows_screenshooter/winapi"
 )
 
 func loadDll(dll_name string) *syscall.DLL {
